@@ -1,0 +1,366 @@
+configVersion: 1.0.0
+componentName: eic
+coreVersion: 5.9.2
+device: PIC32CX2051BZ62132
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: eic
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: csp
+  type: package
+  version: v3.26.1
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: eic
+          x: '195'
+          y: '487'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    DEBOUNCE_SUPPORT:
+      attributes:
+        id: DEBOUNCE_SUPPORT
+        label: DEBOUNCE_SUPPORT
+      type: Boolean
+    EIC_ASYNCH:
+      attributes:
+        id: EIC_ASYNCH
+        label: EIC_ASYNCH
+      children:
+      - children:
+        - attributes:
+            id: eic
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Hex
+    EIC_ASYNCH_0:
+      attributes:
+        id: EIC_ASYNCH_0
+        label: External Interrupt0 Detection Clock
+      type: KeyValueSet
+    EIC_ASYNCH_1:
+      attributes:
+        id: EIC_ASYNCH_1
+        label: External Interrupt1 Detection Clock
+      type: KeyValueSet
+    EIC_ASYNCH_2:
+      attributes:
+        id: EIC_ASYNCH_2
+        label: External Interrupt2 Detection Clock
+      type: KeyValueSet
+    EIC_ASYNCH_3:
+      attributes:
+        id: EIC_ASYNCH_3
+        label: External Interrupt3 Detection Clock
+      type: KeyValueSet
+    EIC_CHAN_0:
+      attributes:
+        id: EIC_CHAN_0
+        label: Enable EIC Channel0
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    EIC_CHAN_1:
+      attributes:
+        id: EIC_CHAN_1
+        label: Enable EIC Channel1
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    EIC_CHAN_2:
+      attributes:
+        id: EIC_CHAN_2
+        label: Enable EIC Channel2
+      type: Boolean
+    EIC_CHAN_3:
+      attributes:
+        id: EIC_CHAN_3
+        label: Enable EIC Channel3
+      type: Boolean
+    EIC_CLKSEL:
+      attributes:
+        id: EIC_CLKSEL
+        label: EIC Clock Source Selection
+      type: KeyValueSet
+    EIC_CONFIG_FILTEN_0:
+      attributes:
+        id: EIC_CONFIG_FILTEN_0
+        label: Enable filter
+      children:
+      - children:
+        - attributes:
+            id: visible
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    EIC_CONFIG_FILTEN_1:
+      attributes:
+        id: EIC_CONFIG_FILTEN_1
+        label: Enable filter
+      children:
+      - children:
+        - attributes:
+            id: visible
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    EIC_CONFIG_FILTEN_2:
+      attributes:
+        id: EIC_CONFIG_FILTEN_2
+        label: Enable filter
+      type: Boolean
+    EIC_CONFIG_FILTEN_3:
+      attributes:
+        id: EIC_CONFIG_FILTEN_3
+        label: Enable filter
+      type: Boolean
+    EIC_CONFIG_SENSE_0:
+      attributes:
+        id: EIC_CONFIG_SENSE_0
+        label: External Interrupt0 Edge Selection
+      children:
+      - children:
+        - attributes:
+            value: '1'
+          type: User
+        type: Values
+      type: KeyValueSet
+    EIC_CONFIG_SENSE_1:
+      attributes:
+        id: EIC_CONFIG_SENSE_1
+        label: External Interrupt1 Edge Selection
+      children:
+      - children:
+        - attributes:
+            value: '1'
+          type: User
+        type: Values
+      type: KeyValueSet
+    EIC_CONFIG_SENSE_2:
+      attributes:
+        id: EIC_CONFIG_SENSE_2
+        label: External Interrupt2 Edge Selection
+      type: KeyValueSet
+    EIC_CONFIG_SENSE_3:
+      attributes:
+        id: EIC_CONFIG_SENSE_3
+        label: External Interrupt3 Edge Selection
+      type: KeyValueSet
+    EIC_DEBOUNCEN:
+      attributes:
+        id: EIC_DEBOUNCEN
+        label: EIC_DEBOUNCEN
+      children:
+      - children:
+        - attributes:
+            id: eic
+            value: '3'
+          type: Dynamic
+        type: Values
+      type: Hex
+    EIC_DEBOUNCEN_0:
+      attributes:
+        id: EIC_DEBOUNCEN_0
+        label: Enable Debounce
+      children:
+      - children:
+        - attributes:
+            id: visible
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    EIC_DEBOUNCEN_1:
+      attributes:
+        id: EIC_DEBOUNCEN_1
+        label: Enable Debounce
+      children:
+      - children:
+        - attributes:
+            id: visible
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    EIC_DEBOUNCEN_2:
+      attributes:
+        id: EIC_DEBOUNCEN_2
+        label: Enable Debounce
+      type: Boolean
+    EIC_DEBOUNCEN_3:
+      attributes:
+        id: EIC_DEBOUNCEN_3
+        label: Enable Debounce
+      type: Boolean
+    EIC_DEBOUNCER_NO_STATES_0:
+      attributes:
+        id: EIC_DEBOUNCER_NO_STATES_0
+        label: Valid Pin States for EXTINT[7:0]
+      type: KeyValueSet
+    EIC_DEBOUNCER_PRESCALER_0:
+      attributes:
+        id: EIC_DEBOUNCER_PRESCALER_0
+        label: Debouncer Prescaler for EXTINT[7:0]
+      type: KeyValueSet
+    EIC_EXTINTEO:
+      attributes:
+        id: EIC_EXTINTEO
+        label: EIC_EXTINTEO
+      children:
+      - children:
+        - attributes:
+            id: eic
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Hex
+    EIC_EXTINTEO_0:
+      attributes:
+        id: EIC_EXTINTEO_0
+        label: Enable Event Output
+      type: Boolean
+    EIC_EXTINTEO_1:
+      attributes:
+        id: EIC_EXTINTEO_1
+        label: Enable Event Output
+      type: Boolean
+    EIC_EXTINTEO_2:
+      attributes:
+        id: EIC_EXTINTEO_2
+        label: Enable Event Output
+      type: Boolean
+    EIC_EXTINTEO_3:
+      attributes:
+        id: EIC_EXTINTEO_3
+        label: Enable Event Output
+      type: Boolean
+    EIC_INSTANCE_NAME:
+      attributes:
+        id: EIC_INSTANCE_NAME
+        label: EIC_INSTANCE_NAME
+      type: String
+    EIC_INT:
+      attributes:
+        id: EIC_INT
+        label: EIC_INT
+      children:
+      - children:
+        - attributes:
+            id: eic
+            value: '3'
+          type: Dynamic
+        type: Values
+      type: Hex
+    EIC_INT_0:
+      attributes:
+        id: EIC_INT_0
+        label: Enable Interrupt
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    EIC_INT_1:
+      attributes:
+        id: EIC_INT_1
+        label: Enable Interrupt
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    EIC_INT_2:
+      attributes:
+        id: EIC_INT_2
+        label: Enable Interrupt
+      type: Boolean
+    EIC_INT_3:
+      attributes:
+        id: EIC_INT_3
+        label: Enable Interrupt
+      type: Boolean
+    EIC_INT_COUNT:
+      attributes:
+        id: EIC_INT_COUNT
+        label: EIC_INT_COUNT
+      type: Integer
+    EIC_PRESCALER_TICKON:
+      attributes:
+        id: EIC_PRESCALER_TICKON
+        label: Debouncer Sampler Clock Source
+      type: KeyValueSet
+    NMI_ASYNCH:
+      attributes:
+        id: NMI_ASYNCH
+        label: NMI Detection Clock
+      type: KeyValueSet
+    NMI_CTRL:
+      attributes:
+        id: NMI_CTRL
+        label: Non Maskable Interrupt Control
+      type: Boolean
+    NMI_FILTEN:
+      attributes:
+        id: NMI_FILTEN
+        label: Enable filter
+      type: Boolean
+    NMI_SENSE:
+      attributes:
+        id: NMI_SENSE
+        label: NMI Interrupt Edge Selection
+      type: KeyValueSet
+  userData: {}

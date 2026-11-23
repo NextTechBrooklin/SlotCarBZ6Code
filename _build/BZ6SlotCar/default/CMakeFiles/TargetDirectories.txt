@@ -1,0 +1,5 @@
+C:/Aloe/Wireless/PodCast_Files/SlotCar/_build/BZ6SlotCar/default/CMakeFiles/BZ6SlotCar_default_default_XC32_compile.dir
+C:/Aloe/Wireless/PodCast_Files/SlotCar/_build/BZ6SlotCar/default/CMakeFiles/BZ6SlotCar_default_image_yWqUIJoV.dir
+C:/Aloe/Wireless/PodCast_Files/SlotCar/_build/BZ6SlotCar/default/CMakeFiles/BZ6SlotCar_default_Bin2Hex.dir
+C:/Aloe/Wireless/PodCast_Files/SlotCar/_build/BZ6SlotCar/default/CMakeFiles/edit_cache.dir
+C:/Aloe/Wireless/PodCast_Files/SlotCar/_build/BZ6SlotCar/default/CMakeFiles/rebuild_cache.dir

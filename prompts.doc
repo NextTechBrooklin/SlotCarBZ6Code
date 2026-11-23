@@ -1,0 +1,1 @@
+ remove the concept of using mobile phones for remotes connected via bluetooth.  Add back the remotes ata8510 with SAMD21 processors.  refer to reference application.   Also uw clock board slot 2 on the BZ6 curiosity board.  Use PB5 for PWRON, PC10 for NRESET, PB9 for CS.   and PE5, PA4 and PA9 for SPI connectivity

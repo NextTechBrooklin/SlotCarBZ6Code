@@ -1,0 +1,141 @@
+{
+    "version": "1.9",
+    "configurations": [
+        {
+            "name": "default",
+            "id": "",
+            "device": "PIC32CX2051BZ62132",
+            "imagePath": "./out/BZ6SlotCar/default.elf",
+            "toolProperties": "default-tool-base",
+            "tool": "Curiosity/Starter Kits (PKOB4)",
+            "packs": [
+                {
+                    "name": "PIC32CX-BZ6_DFP",
+                    "vendor": "Microchip",
+                    "version": "1.4.74"
+                },
+                {
+                    "name": "CMSIS",
+                    "vendor": "ARM",
+                    "version": "6.4.0"
+                }
+            ],
+            "fileSet": "default",
+            "toolchain": "default-XC32"
+        }
+    ],
+    "propertyGroups": [
+        {
+            "name": "default-XC32",
+            "type": "toolchain",
+            "provider": "microchip.toolchains:xc32@6.00",
+            "properties": {
+                "compiler.extra-include-directories": [
+                    "config.mcc/mcc",
+                    "config.mcc/src",
+                    "config.mcc/src/app",
+                    "config.mcc/src/app/ata8510",
+                    "config.mcc/src/app_ble",
+                    "config.mcc/src/config/default",
+                    "config.mcc/src/config/default/ble/lib/include",
+                    "config.mcc/src/config/default/ble/middleware_ble",
+                    "config.mcc/src/config/default/ble/profile_ble",
+                    "config.mcc/src/config/default/ble/service_ble",
+                    "config.mcc/src/config/default/driver/pds/include",
+                    "config.mcc/src/packs/CMSIS",
+                    "config.mcc/src/packs/CMSIS/CMSIS/Core/Include",
+                    "config.mcc/src/packs/PIC32CX2051BZ62132_DFP",
+                    "config.mcc/src/third_party/rtos/FreeRTOS/Source/include",
+                    "config.mcc/src/third_party/rtos/FreeRTOS/Source/portable/GCC/SAM/ARM_CM4F"
+                ],
+                "compiler.make-warnings-into-errors": "false",
+                "linker.heap-size": "512",
+                "compiler++.extra-include-directories": [
+                    "config.mcc/mcc",
+                    "config.mcc/src",
+                    "config.mcc/src/config/default",
+                    "config.mcc/src/packs/CMSIS",
+                    "config.mcc/src/packs/CMSIS/CMSIS/Core/Include",
+                    "config.mcc/src/packs/PIC32CX2051BZ62132_DFP",
+                    "config.mcc/src/third_party/rtos/FreeRTOS/Source/include",
+                    "config.mcc/src/third_party/rtos/FreeRTOS/Source/portable/GCC/SAM/ARM_CM4F"
+                ],
+                "linker.no-device-startup-code": "true",
+                "C32Global.mstacktcm": "false",
+                "compiler.tentative-definitions": "-fcommon",
+                "compiler.isolate-each-function": "true",
+                "compiler.optimization-level": "-O1",
+                "compiler.place-data-into-section": "true",
+                "linker.remove-unused-sections": "true",
+                "compiler++.isolate-each-function": "true",
+                "compiler++.optimization-level": "-O1"
+            }
+        },
+        {
+            "name": "default-tool-base",
+            "type": "tool",
+            "properties": {}
+        }
+    ],
+    "fileSets": [
+        {
+            "name": "default",
+            "files": [
+                {
+                    "include": "**/*",
+                    "exclude": "**/@(build|_build|out|cmake|.vscode)/**/*"
+                },
+                "config.mcc/src/app_ble/app_ble.c",
+                "config.mcc/src/app_ble/app_ble_handler.c",
+                "config.mcc/src/app_ble/app_ble_utility.c",
+                "config.mcc/src/config/default/ble/middleware_ble/ble_util/mw_aes.c",
+                "config.mcc/src/config/default/ble/middleware_ble/ble_dm/ble_dm.c",
+                "config.mcc/src/config/default/ble/middleware_ble/ble_dm/ble_dm_conn.c",
+                "config.mcc/src/config/default/ble/middleware_ble/ble_dm/ble_dm_sm.c",
+                "config.mcc/src/config/default/ble/middleware_ble/ble_dm/ble_dm_info.c",
+                "config.mcc/src/config/default/ble/middleware_ble/ble_dm/ble_dm_dds.c",
+                "config.mcc/src/config/default/peripheral/evsys/plib_evsys.c",
+                "config.mcc/src/config/default/PIC32CX2051BZ62132.ld",
+                "config.mcc/src/config/default/peripheral/sercom/usart/plib_sercom0_usart.c",
+                "config.mcc/src/main.c",
+                "config.mcc/src/config/default/initialization.c",
+                "config.mcc/src/config/default/interrupts.c",
+                "config.mcc/src/config/default/exceptions.c",
+                "config.mcc/src/config/default/stdio/xc32_monitor.c",
+                "config.mcc/src/config/default/peripheral/clk/plib_clk.c",
+                "config.mcc/src/config/default/peripheral/gpio/plib_gpio.c",
+                "config.mcc/src/config/default/peripheral/nvic/plib_nvic.c",
+                "config.mcc/src/config/default/peripheral/cmcc/plib_cmcc.c",
+                "config.mcc/src/config/default/startup_xc32.c",
+                "config.mcc/src/config/default/libc_syscalls.c",
+                "config.mcc/src/config/default/peripheral/sercom/spi_master/plib_sercom4_spi_master.c",
+                "config.mcc/src/config/default/peripheral/eic/plib_eic.c",
+                "config.mcc/src/config/default/peripheral/tc/plib_tc2.c",
+                "config.mcc/src/config/default/peripheral/nvm/plib_nvm.c",
+                "config.mcc/src/config/default/peripheral/tc/plib_tc8.c",
+                "config.mcc/src/config/default/osal/osal_freertos_extend.c",
+                "config.mcc/src/config/default/osal/osal_freertos.c",
+                "config.mcc/src/app.c",
+                "config.mcc/src/app_idle_task.c",
+                "config.mcc/src/app_user_edits.c",
+                "config.mcc/src/config/default/freertos_hooks.c",
+                "config.mcc/src/third_party/rtos/FreeRTOS/Source/croutine.c",
+                "config.mcc/src/third_party/rtos/FreeRTOS/Source/list.c",
+                "config.mcc/src/third_party/rtos/FreeRTOS/Source/queue.c",
+                "config.mcc/src/third_party/rtos/FreeRTOS/Source/FreeRTOS_tasks.c",
+                "config.mcc/src/third_party/rtos/FreeRTOS/Source/timers.c",
+                "config.mcc/src/third_party/rtos/FreeRTOS/Source/event_groups.c",
+                "config.mcc/src/third_party/rtos/FreeRTOS/Source/stream_buffer.c",
+                "config.mcc/src/third_party/rtos/FreeRTOS/Source/portable/MemMang/heap_4.c",
+                "config.mcc/src/third_party/rtos/FreeRTOS/Source/portable/GCC/SAM/ARM_CM4F/port.c",
+                "config.mcc/src/config/default/system/int/src/sys_int.c",
+                "config.mcc/src/config/default/system/cache/sys_cache.c",
+                "config.mcc/src/config/default/tasks.c",
+                "config.mcc/src/config/default/ble/service_ble/ble_trs/ble_trs.c",
+                "config.mcc/src/config/default/ble/profile_ble/ble_trsps/ble_trsps.c",
+                "config.mcc/src/app_ble/app_trsps_handler.c",
+                "config.mcc/src/config/default/peripheral/sercom/spi_master/plib_sercom1_spi_master.c"
+            ]
+        }
+    ]
+}
