@@ -154,7 +154,7 @@ The ATA8510 Click goes in **mikroBUS 2 (J905)**. It polls the two SAMD21 joystic
    | Hardware SS (MSSEN) | **disabled**. CS is the GPIO `ATA_CS` on PB9, which the driver toggles around each telegram. PAD2 is PA10, the H-Bridge EN pin |
    | Interrupt mode | **☐ off (blocking)**. `SYS_ATA851X.c` expects `SERCOM4_SPI_WriteRead()` to return only after the transfer has finished |
 
-3. GPIO for the Click is configured in step 12: `ATA_CS` PB9, `ATA_NRESET` PC10, `ATA_NPWRON` PB5, `ATA_IRQ` PE3.
+3. GPIO for the Click is configured in step 12: `ATA_CS` PB9, `ATA_NRESET` PC10, `ATA_NPWRON` PC11, `ATA_IRQ` PE3.
 
 ## Step 11: Lap sensors, EIC
 1. Add **EIC**.
@@ -192,7 +192,7 @@ Car 1 = IN1/IN2 and car 2 = IN3/IN4. PWM goes on IN2 and IN3, with IN1 and IN4 h
 | PA4 | SERCOM4_PAD0 | | ATA8510 MISO (mikroBUS2 MISO) |
 | PB9 | GPIO Out, **high** | `ATA_CS` | ATA8510 CS (mikroBUS2 CS), active low. **Also SWDIO and SW801**, see the note below |
 | PC10 | GPIO Out, **high** | `ATA_NRESET` | ATA8510 NRESET (mikroBUS2 RST), active low. Also the green RGB LED |
-| PB5 | GPIO Out, **high** | `ATA_NPWRON` | ATA8510 NPWRON (mikroBUS2 AN), active low. Analog off. Also BAT_MON |
+| PC11 | GPIO Out, **high** | `ATA_NPWRON` | ATA8510 NPWRON (mikroBUS2 **PWM** pin, J701-20), active low. The ATA8510 Click wires NPWRON to the PWM pin, not AN. Also RMII_EN |
 | PE3 | GPIO In, pull-up ✔ | `ATA_IRQ` | ATA8510 IRQ (mikroBUS2 INT), active low. Also SW800 / BTN2 |
 | PA7 (J900-11) | SERCOM1_PAD0 | | WS2812 DIN |
 | PA8 (J900-12) | SERCOM1_PAD1 (optional) | | SPI SCK (the WS2812 doesn't need it) |
@@ -216,6 +216,8 @@ Notes:
 1. Click **Generate**, then build. The empty project must compile.
 2. Program the board through the PKOB4 (USB-C J100).
 3. Open the **Microchip Bluetooth Data (MBD)** app → BLE UART → scan. **SLOTCAR_MASTERS** must appear and connect.
+
+**Boot metadata (automatic).** The BZ6 boot ROM only starts an application that has a 512-byte metadata header at `0x01000000`, in front of the image at `0x01000200`. MPLAB does not add it, so the build does: `cmake/BZ6SlotCar/default/user.cmake` runs `scripts/add_bz6_metadata.py` after linking, which embeds the header (same layout as Zephyr's `gen_signed_hex.py`: sequence `0xFFFFFFFE`, auth none, revision `0x01000000`) into `out/BZ6SlotCar/default.elf` as a loadable segment. Programming or debugging the ELF, or the `default.hex` built from it, therefore includes the header. `user.cmake` is not overwritten when MPLAB regenerates the CMake files. To check a board, read `0x01000018`: it must be `0x4D434850` (`PHCM`).
 
 ## Step 14: Add the application code
 **Done.** The application lives in `config.mcc/src/app/`. The VS Code project's `**/*` file set picks it up automatically, and it's included as `"app/xxx.h"` from `config.mcc/src`. These edits are already applied in the generated files. When MCC asks to merge on regenerate, **keep** them:

@@ -2134,7 +2134,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '672'
+            value: '640'
           type: Dynamic
         type: Values
       type: Hex
@@ -2146,7 +2146,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '1696'
+            value: '1664'
           type: Dynamic
         type: Values
       type: Hex
@@ -5517,7 +5517,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '1024'
+            value: '3072'
           type: Dynamic
         type: Values
       type: Hex
@@ -5540,7 +5540,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '1024'
+            value: '3072'
           type: Dynamic
         type: Values
       type: Hex
@@ -5566,9 +5566,9 @@ data:
           type: User
         type: Values
       type: String
-    BSP_PIN_122_FUNCTION_TYPE:
+    BSP_PIN_85_FUNCTION_TYPE:
       attributes:
-        id: BSP_PIN_122_FUNCTION_TYPE
+        id: BSP_PIN_85_FUNCTION_TYPE
         label: Type
       children:
       - children:
@@ -5577,9 +5577,9 @@ data:
           type: User
         type: Values
       type: String
-    BSP_PIN_122_FUNCTION_NAME:
+    BSP_PIN_85_FUNCTION_NAME:
       attributes:
-        id: BSP_PIN_122_FUNCTION_NAME
+        id: BSP_PIN_85_FUNCTION_NAME
         label: Name
       children:
       - children:
@@ -6558,9 +6558,9 @@ data:
           type: Dynamic
         type: Values
       type: String
-    BSP_PIN_122_DIR:
+    BSP_PIN_85_DIR:
       attributes:
-        id: BSP_PIN_122_DIR
+        id: BSP_PIN_85_DIR
         label: Direction
       children:
       - children:
@@ -6569,9 +6569,9 @@ data:
           type: User
         type: Values
       type: String
-    BSP_PIN_122_LAT:
+    BSP_PIN_85_LAT:
       attributes:
-        id: BSP_PIN_122_LAT
+        id: BSP_PIN_85_LAT
         label: Initial Latch Value
       children:
       - children:

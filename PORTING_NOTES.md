@@ -60,7 +60,7 @@ The throttle does **not** go over BLE. The two SAMD21 joystick remotes are polle
 | Console | SERCOM5 PB16/17 | SERCOM0 PA5/PA6 → MCP2200 VCOM |
 | BLE | RNBD451 on SERCOM4 + RST/RTS/CTS | on-chip, no pins |
 | 433 MHz RF SPI | ATA8510 on SERCOM1 (PA16/17/19) | SERCOM4 on mikroBUS 2: SCK PE5 (PAD1), MISO PA4 (PAD0), MOSI PA9 (PAD3) |
-| ATA8510 CS / NRESET / NPWRON / IRQ | PB5 / PA6 / PA11 / PB14 | PB9 (`ATA_CS`, also SWDIO) / PC10 (`ATA_NRESET`, also green LED) / PB5 (`ATA_NPWRON`) / PE3 (`ATA_IRQ`, also SW800) |
+| ATA8510 CS / NRESET / NPWRON / IRQ | PB5 / PA6 / PA11 / PB14 | PB9 (`ATA_CS`, also SWDIO) / PC10 (`ATA_NRESET`, also green LED) / PC11 (`ATA_NPWRON`, mikroBUS 2 PWM pin) / PE3 (`ATA_IRQ`, also SW800) |
 
 ## Behaviour differences and fixes
 

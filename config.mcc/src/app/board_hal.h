@@ -22,7 +22,7 @@
     GPIO     LED0 (PB7), HB_IN1 (PB10), HB_IN4 (PD1), PWM_EN (PA10)
              ATA_CS (PB9, out, high)      - mikroBUS2 CS  (shares SWDIO/SW801)
              ATA_NRESET (PC10, out, high) - mikroBUS2 RST (shares green LED)
-             ATA_NPWRON (PB5, out, high)  - mikroBUS2 AN  (shares BAT_MON)
+             ATA_NPWRON (PC11, out, high) - mikroBUS2 PWM (shares RMII_EN)
              ATA_IRQ (PE3, in, pull-up)   - mikroBUS2 INT (shares SW800)
  *******************************************************************************/
 #ifndef BOARD_HAL_H
@@ -83,7 +83,7 @@
  *   SPI    : SERCOM4 host, blocking PLIB -> WriteRead returns when done
  *   CS     : PB9  active low   (also SWDIO / SW801 - see MCC_Setup_BZ6.md)
  *   NRESET : PC10 active low   (also green RGB LED)
- *   NPWRON : PB5  active low   (also BAT_MON)
+ *   NPWRON : PC11 active low   (mikroBUS 2 PWM pin, also RMII_EN)
  *   IRQ    : PE3  active low   (also SW800 / BTN2), input with pull-up
  * ---------------------------------------------------------------------- */
 #define HAL_ATA_SPI_WriteRead(tx, txn, rx, rxn) \

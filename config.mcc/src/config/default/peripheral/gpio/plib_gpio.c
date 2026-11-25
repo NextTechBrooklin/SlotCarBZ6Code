@@ -64,13 +64,13 @@ void GPIO_Initialize ( void )
     GPIOA_REGS->GPIO_LAT = 0x0U; /* Initial Latch Value */
     GPIOA_REGS->GPIO_TRISCLR = 0x400U; /* Direction Control */
     /* PORTB Initialization */
-    GPIOB_REGS->GPIO_LAT = 0x2a0U; /* Initial Latch Value */
-    GPIOB_REGS->GPIO_TRISCLR = 0x6a0U; /* Direction Control */
+    GPIOB_REGS->GPIO_LAT = 0x280U; /* Initial Latch Value */
+    GPIOB_REGS->GPIO_TRISCLR = 0x680U; /* Direction Control */
     GPIOB_REGS->GPIO_ANSELCLR = 0xca8U; /* Digital Mode Enable */
     GPIOB_REGS->GPIO_CNPUSET = 0x1800U; /* Pull-Up Enable */
     /* PORTC Initialization */
-    GPIOC_REGS->GPIO_LAT = 0x400U; /* Initial Latch Value */
-    GPIOC_REGS->GPIO_TRISCLR = 0x400U; /* Direction Control */
+    GPIOC_REGS->GPIO_LAT = 0xc00U; /* Initial Latch Value */
+    GPIOC_REGS->GPIO_TRISCLR = 0xc00U; /* Direction Control */
     /* PORTD Initialization */
     GPIOD_REGS->GPIO_LAT = 0x0U; /* Initial Latch Value */
     GPIOD_REGS->GPIO_TRISCLR = 0x2U; /* Direction Control */

@@ -1,8 +1,7 @@
 {
     "configurations": [
         {
-            "reference": "default",
-            "toolSerial": "RYN253800285"
+            "reference": "default"
         }
     ]
 }

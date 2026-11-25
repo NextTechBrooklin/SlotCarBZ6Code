@@ -118,13 +118,13 @@
 #define LED0_InputEnable()       (GPIOB_REGS->GPIO_TRISSET = (1U<<7U))
 #define LED0_PIN                  GPIO_PIN_RB7
 /*** Macros for ATA_NPWRON pin ***/
-#define ATA_NPWRON_Set()               (GPIOB_REGS->GPIO_LATSET = (1U<<5U))
-#define ATA_NPWRON_Clear()             (GPIOB_REGS->GPIO_LATCLR = (1U<<5U))
-#define ATA_NPWRON_Toggle()            (GPIOB_REGS->GPIO_LATINV= (1U<<5U))
-#define ATA_NPWRON_Get()               ((GPIOB_REGS->GPIO_PORT >> 5U) & 0x1U)
-#define ATA_NPWRON_OutputEnable()      (GPIOB_REGS->GPIO_TRISCLR = (1U<<5U))
-#define ATA_NPWRON_InputEnable()       (GPIOB_REGS->GPIO_TRISSET = (1U<<5U))
-#define ATA_NPWRON_PIN                  GPIO_PIN_RB5
+#define ATA_NPWRON_Set()               (GPIOC_REGS->GPIO_LATSET = (1U<<11U))
+#define ATA_NPWRON_Clear()             (GPIOC_REGS->GPIO_LATCLR = (1U<<11U))
+#define ATA_NPWRON_Toggle()            (GPIOC_REGS->GPIO_LATINV= (1U<<11U))
+#define ATA_NPWRON_Get()               ((GPIOC_REGS->GPIO_PORT >> 11U) & 0x1U)
+#define ATA_NPWRON_OutputEnable()      (GPIOC_REGS->GPIO_TRISCLR = (1U<<11U))
+#define ATA_NPWRON_InputEnable()       (GPIOC_REGS->GPIO_TRISSET = (1U<<11U))
+#define ATA_NPWRON_PIN                  GPIO_PIN_RC11
 
 
 // *****************************************************************************

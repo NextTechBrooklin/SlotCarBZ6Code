@@ -156,7 +156,7 @@ This replaces the "phone is the only controller" decision above.
 - **Phone throttle removed.** `remote.c/.h` and the `SPD1:`/`SPD2:` commands are gone. BLE still carries `START_RACE`, `STOP_RACE`, `GHOST`, `PRACTICE`, the new `DEMO` command, and the lap and PWM frames.
 - **ATA8510 back.** The Click goes in mikroBUS 2 (J905) and polls the two SAMD21 joystick remotes with the unchanged SlotCarSam protocol.
   - SPI: SERCOM4 host, blocking, 500 kHz. SCK PE5, MISO PA4, MOSI PA9.
-  - GPIO: CS PB9, NRESET PC10, NPWRON PB5, IRQ PE3.
+  - GPIO: CS PB9, NRESET PC10, NPWRON PC11 (mikroBUS 2 PWM pin), IRQ PE3.
 - **WS2812 moved** to SERCOM1 PAD0 on PA7 (XPRO J900-11), because PA9 is now ATA8510 MOSI.
 - **Demo button removed**, because PE3 (SW800) is now the ATA8510 IRQ. The demo starts with the BLE `DEMO` command.
 - **SWD warning.** PB9 doubles as SWDIO. See `MCC_Setup_BZ6.md` step 12.

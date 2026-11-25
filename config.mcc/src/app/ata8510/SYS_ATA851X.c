@@ -15,7 +15,7 @@
                                              PA9=MOSI PAD3), 500 kHz, mode 0
       CS:      PB9  (active low)   - shared with SWDIO / SW801
       NRESET:  PC10 (active low)   - shared with green RGB LED
-      NPWRON:  PB5  (active low)   - shared with BAT_MON
+      NPWRON:  PC11 (active low)   - mikroBUS 2 PWM pin, shared with RMII_EN
       IRQ:     PE3  (active low)   - shared with SW800 (read in ata8510.c)
     All pin / PLIB names are in board_hal.h (HAL_ATA_*).
 

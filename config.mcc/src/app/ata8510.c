@@ -234,7 +234,7 @@ static void ATA8510_ProcessResponse(void)
 
 void ATA8510_Init(void)
 {
-    /* CS (PB9), NRESET (PC10), NPWRON (PB5) and IRQ (PE3, pull-up) are
+    /* CS (PB9), NRESET (PC10), NPWRON (PC11) and IRQ (PE3, pull-up) are
      * configured by MCC (Pin Configuration) - see MCC_Setup_BZ6.md. */
     HAL_ATA_GPIO_Init();
 
